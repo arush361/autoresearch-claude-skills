@@ -1,0 +1,49 @@
+{
+  "skill_name": "product-management",
+  "status": "complete",
+  "current_experiment": 3,
+  "baseline_score": 59.2,
+  "best_score": 97.5,
+  "experiments": [
+    {
+      "id": 0,
+      "score": 71,
+      "max_score": 120,
+      "pass_rate": 59.2,
+      "status": "baseline",
+      "description": "original skill -- no changes"
+    },
+    {
+      "id": 1,
+      "score": 98,
+      "max_score": 120,
+      "pass_rate": 81.7,
+      "status": "keep",
+      "description": "added Projected Totals (MANDATORY) -- all outputs must show projected /60 totals and preliminary FILE/WAIT/SKIP"
+    },
+    {
+      "id": 2,
+      "score": 111,
+      "max_score": 120,
+      "pass_rate": 92.5,
+      "status": "keep",
+      "description": "added explicit (C)/(U*) column markers to all WINNING tables for hybrid scoring compliance"
+    },
+    {
+      "id": 3,
+      "score": 117,
+      "max_score": 120,
+      "pass_rate": 97.5,
+      "status": "keep",
+      "description": "backlog outputs now infer representative items when user provides incomplete list"
+    }
+  ],
+  "eval_breakdown": [
+    {"name": "WINNING Score Structure", "pass_count": 18, "total": 20},
+    {"name": "Evidence-Backed Claims", "pass_count": 18, "total": 20},
+    {"name": "Hybrid Scoring Compliance", "pass_count": 20, "total": 20},
+    {"name": "Actionable Decisions", "pass_count": 20, "total": 20},
+    {"name": "Template Compliance", "pass_count": 20, "total": 20},
+    {"name": "Scope Discipline", "pass_count": 20, "total": 20}
+  ]
+}

@@ -1,0 +1,5 @@
+experiment	score	max_score	pass_rate	status	description
+0	71	120	59.2%	baseline	original skill -- no changes
+1	98	120	81.7%	keep	added Projected Totals (MANDATORY) -- all outputs must show projected /60 totals and preliminary FILE/WAIT/SKIP
+2	111	120	92.5%	keep	added explicit (C)/(U*) column markers to all WINNING tables for hybrid scoring compliance
+3	117	120	97.5%	keep	backlog outputs now infer representative items when user provides incomplete list
