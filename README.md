@@ -4,8 +4,8 @@ Applying [Karpathy's autoresearch methodology](https://github.com/karpathy/autor
 
 ## How to Run Autoresearch on Your Skills
 
-1. Install the autoresearch skill in `~/.claude/skills/autoresearch/`
-2. Install Hamel's evals-skills: [github.com/hamelsmu/evals-skills](https://github.com/hamelsmu/evals-skills)
+1. Download the autoresearch skill from this Repo
+2. Copy the autoresearch skill in `~/.claude/skills/autoresearch/`
 3. Run: `/autoresearch [your-skill-name]`
 4. Define 3-6 binary evals (yes/no only, no scales)
 5. Choose 3-5 test inputs covering different use cases
