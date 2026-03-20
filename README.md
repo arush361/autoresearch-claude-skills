@@ -86,7 +86,3 @@ autoresearch-claude-skills/
 - **Autoresearch methodology**: [Andrej Karpathy](https://github.com/karpathy/autoresearch)
 - **Evals framework**: [Hamel Husain](https://github.com/hamelsmu/evals-skills)
 - **Built with**: [Claude Code](https://claude.ai/claude-code) (Opus 4.6)
-
-## License
-
-MIT
