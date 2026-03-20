@@ -2,6 +2,8 @@
 
 Applying [Karpathy's autoresearch methodology](https://github.com/karpathy/autoresearch) + [Hamel's evals-skills framework](https://github.com/hamelsmu/evals-skills) to autonomously optimize Claude Code skills using binary evals.
 
+![Autoresearch Dashboard](screenshots/dashboard-top.png)
+
 ## Case Study: Product Manager Skill (59% to 97% in 3 Experiments)
 
 The `/product-manager` skill handles gap analysis, competitor research, PRD generation, and backlog prioritization using a WINNING scoring framework (Pain, Timing, Execution, Fit, Revenue, Moat -- each /10, total /60).
