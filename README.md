@@ -4,6 +4,28 @@ Applying [Karpathy's autoresearch methodology](https://github.com/karpathy/autor
 
 ![Autoresearch Dashboard](screenshots/dashboard-top.png)
 
+## How to Run Autoresearch on Your Skills
+
+1. Install the autoresearch skill in `~/.claude/skills/autoresearch/`
+2. Install Hamel's evals-skills: [github.com/hamelsmu/evals-skills](https://github.com/hamelsmu/evals-skills)
+3. Run: `/autoresearch [your-skill-name]`
+4. Define 3-6 binary evals (yes/no only, no scales)
+5. Choose 3-5 test inputs covering different use cases
+6. Set runs per experiment (recommended: 20)
+7. The loop runs autonomously until 95%+ or you stop it
+
+## How It Works
+
+```
+┌─────────┐     ┌─────────┐     ┌─────────┐     ┌─────────┐     ┌─────────┐
+│  Run    │────>│  Score  │────>│ Analyze │────>│ Mutate  │────>│ Keep?   │
+│  Skill  │     │  Output │     │ Failures│     │  Skill  │     │ Discard?│
+└─────────┘     └─────────┘     └─────────┘     └─────────┘     └────┬────┘
+     ^                                                               │
+     └───────────────────────────────────────────────────────────────┘
+                              REPEAT UNTIL 95%+
+```
+
 ## Case Study: Product Manager Skill (59% to 97% in 3 Experiments)
 
 The `/product-manager` skill handles gap analysis, competitor research, PRD generation, and backlog prioritization using a WINNING scoring framework (Pain, Timing, Execution, Fit, Revenue, Moat -- each /10, total /60).
@@ -59,28 +81,6 @@ autoresearch-claude-skills/
     ├── results.json           # Dashboard data
     ├── changelog.md           # Detailed mutation log
     └── dashboard.html         # Live browser dashboard
-```
-
-## How to Run Autoresearch on Your Skills
-
-1. Install the autoresearch skill in `~/.claude/skills/autoresearch/`
-2. Install Hamel's evals-skills: [github.com/hamelsmu/evals-skills](https://github.com/hamelsmu/evals-skills)
-3. Run: `/autoresearch [your-skill-name]`
-4. Define 3-6 binary evals (yes/no only, no scales)
-5. Choose 3-5 test inputs covering different use cases
-6. Set runs per experiment (recommended: 20)
-7. The loop runs autonomously until 95%+ or you stop it
-
-## How It Works
-
-```
-┌─────────┐     ┌─────────┐     ┌─────────┐     ┌─────────┐     ┌─────────┐
-│  Run    │────>│  Score  │────>│ Analyze │────>│ Mutate  │────>│ Keep?   │
-│  Skill  │     │  Output │     │ Failures│     │  Skill  │     │ Discard?│
-└─────────┘     └─────────┘     └─────────┘     └─────────┘     └────┬────┘
-     ^                                                               │
-     └───────────────────────────────────────────────────────────────┘
-                              REPEAT UNTIL 95%+
 ```
 
 ## Credits
